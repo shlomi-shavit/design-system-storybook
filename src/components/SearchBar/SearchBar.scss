@@ -1,0 +1,94 @@
+@use "../../assets/styles" as *;
+@use "../../assets/styles/spaces" as *;
+
+.search-bar {
+  direction: rtl;
+  background-color: white;
+  padding: 0 $space-30;
+  box-sizing: border-box;
+  display: flex;
+  height: 100px;
+  border-radius: 10px;
+  @extend .center;
+  box-shadow: $shadow-4;
+  flex-direction: row;
+  justify-content: initial;
+  width: 100%;
+  max-width: 1110px;
+
+  @include for-tablet {
+    padding: 0;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    margin: $space-10 auto 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: none;
+    position: relative;
+  }
+
+  @include for-mobile {
+    max-width: 100%;
+  }
+
+  &__dropdown {
+    max-width: initial;
+    margin-left: $space-14;
+    min-width: 20%;
+
+    @include for-tablet {
+      margin-bottom: $space-24;
+      margin-left: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include for-mobile {
+      margin-bottom: $space-20;
+    }
+  }
+
+  &__search-text-field {
+    max-width: initial;
+    margin-left: $space-14;
+    min-width: 20%;
+    @include for-tablet {
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__button {
+    max-width: 145px;
+    margin-left: $space-14;
+
+    @include for-tablet {
+      max-width: 100%;
+      margin: $space-24 0 $space-14;
+      font-size: 1.6rem;
+    }
+
+    @include for-mobile {
+      margin: $space-20 0;
+    }
+  }
+
+  &__button-with-icon {
+    span {
+      color: $gray-300;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    svg {
+      fill: $gray-300;
+
+      .search-bar & {
+        fill: $gray-300;
+      }
+    }
+  }
+}

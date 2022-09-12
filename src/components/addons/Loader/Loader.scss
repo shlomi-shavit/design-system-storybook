@@ -1,0 +1,49 @@
+@use "../../../assets/styles/palette" as *;
+
+.loader {
+  font-size: 1rem;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $gray-200;
+  background: linear-gradient(to right, $gray-200 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  animation: loaderAnimation 1.4s infinite linear;
+  transform: translateZ(0);
+}
+
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: $gray-200;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+
+.loader:after {
+  background: white;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes loaderAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

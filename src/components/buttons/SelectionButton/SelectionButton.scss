@@ -1,0 +1,181 @@
+@use "../../../assets/styles" as *;
+
+.selection-button {
+  direction: rtl;
+  @extend .center;
+  justify-content: start;
+  position: relative;
+  flex: 1;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 165px;
+  }
+
+  &__button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    @extend .center;
+    border: solid 1px $gray-300;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 0;
+
+    input[type="file"] {
+      opacity: 0;
+      cursor: pointer;
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+    }
+
+    .selection-button--popover-is-active &,
+    &:hover {
+      border: solid 1px $yellow-200;
+    }
+
+    &:active:not(.selection-button--popover-is-active &) {
+      svg {
+        transition: all 0.3s ease;
+        transform: scale(0.9);
+      }
+    }
+
+    &-label {
+      margin: 12px 0;
+      font-size: 1.4rem;
+      color: $gray-400;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    &__selected-file {
+      &--wrapper {
+        position: relative;
+        flex: 1;
+        @extend .center;
+      }
+
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: solid 1px $yellow-200;
+      @extend .center;
+
+      img,
+      video {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__active_container {
+    #{".selection-button__content--message"},
+    #{".selection-button__content"} {
+      @extend .transition;
+      opacity: 0;
+      margin-top: -70px;
+      transform: scale(0.5);
+    }
+
+    #{".selection-button__close-icon"} {
+      @extend .transition;
+      opacity: 0;
+      top: 30px;
+      right: 0;
+    }
+
+    &--animation-active,
+    &--animation-done {
+      opacity: 1;
+
+      #{".selection-button__content--message"},
+      #{".selection-button__content"} {
+        opacity: 1;
+        margin-top: 0;
+        transform: scale(1);
+      }
+
+      #{".selection-button__close-icon"} {
+        opacity: 1;
+        top: 0;
+        right: -100px;
+      }
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    svg {
+      fill: $yellow-200;
+      max-width: 35px;
+
+      .selection-button--popover-is-active &,
+      .selected & {
+        fill: $yellow-200;
+      }
+    }
+  }
+
+  &__close-icon {
+    width: 24px;
+    height: 24px;
+    fill: $yellow-200;
+    position: absolute;
+    top: 0;
+    right: -90px;
+    left: 0;
+    margin: auto;
+    cursor: pointer;
+    @extend .center;
+  }
+
+  &__info-icon {
+    width: 20px;
+    height: 20px;
+    fill: $gray-500;
+    float: right;
+    position: relative;
+    @extend .center;
+  }
+
+  &__content {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    transform: translate(-50%, 0%);
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &--message {
+      span {
+        font-size: 1.3rem;
+        display: flex;
+        padding-right: 5px;
+        fill: $gray-500;
+      }
+    }
+  }
+}

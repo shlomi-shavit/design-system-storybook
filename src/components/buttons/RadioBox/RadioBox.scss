@@ -1,0 +1,71 @@
+@use "../../../assets/styles/palette" as *;
+@use "../../../assets/styles/mixins.scss" as *;
+
+.radio-box {
+  &__container {
+    direction: rtl;
+    display: inline-flex;
+    border: 1px solid $gray-200;
+    padding: 3px;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+
+  &__button {
+    position: absolute;
+    top: 100px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    & + label {
+      cursor: pointer;
+      margin-right: -1px;
+      color: $gray-300;
+      height: 42px;
+      box-sizing: border-box;
+      @extend .center;
+      transition: background-color 0.3s ease;
+      padding: 0 10px;
+
+      &:hover {
+        background-color: $yellow-50;
+      }
+
+      &:first-of-type {
+        border-radius: 0.2px 0 0 2px;
+      }
+
+      &:last-of-type {
+        border-radius: 0 2px 2px 0;
+      }
+
+      .radio-box__button--small & {
+        font-size: 1.3rem;
+        min-width: 28px;
+        height: 22px;
+      }
+
+      .radio-box__button--medium & {
+        font-size: 1.4rem;
+        min-width: 44px;
+        height: 32px;
+      }
+
+      .radio-box__button--large & {
+        font-size: 1.6rem;
+        min-width: 54px;
+        padding: 0 20px;
+      }
+    }
+
+    &:checked + label {
+      background-color: $yellow-200;
+      color: white;
+
+      &:hover {
+        background-color: $yellow-300;
+      }
+    }
+  }
+}

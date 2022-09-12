@@ -1,0 +1,93 @@
+@use "../../../assets/styles/palette" as *;
+@use "../../../assets/styles/mixins.scss" as *;
+@use "../../../assets/styles/media-queries" as *;
+
+.button {
+  direction: rtl;
+  border: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  background: $yellow-200;
+  font-weight: bold;
+  color: #fff;
+  transition: all 100ms ease;
+  width: 100%;
+  max-width: 558px;
+  font-family: "Open Sans", "Open Sans hebrew", sans-serif;
+  @extend .center;
+
+  @include for-tablet {
+    max-width: 280px;
+  }
+
+  &:hover {
+    background-color: $yellow-300;
+  }
+
+  &--loading {
+    background-color: $gray-300;
+    pointer-events: none;
+    opacity: 0.4;
+
+    &.button--hollow {
+      border-color: $gray-300;
+    }
+  }
+
+  &__loader {
+    @include loader(white, 18px, 3px);
+
+    @at-root .small#{&} {
+      @include loader(white, 10px, 2px);
+    }
+
+    #{".button--hollow &"} {
+      border-color: $gray-300;
+      @include loader($gray-300, 18px, 3px);
+    }
+  }
+
+  &--solid {
+    &:disabled {
+      color: white;
+      background-color: $gray-300;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+  }
+
+  &--hollow {
+    background-color: transparent;
+    border: solid 1px $yellow-200;
+    color: $yellow-200;
+
+    &:disabled {
+      color: $gray-300;
+      border-color: $gray-300;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    &:hover {
+      background-color: rgba($yellow-200, 0.12);
+    }
+  }
+
+  &--small {
+    height: 24px;
+    font-size: 1.3rem;
+    min-width: 60px;
+  }
+
+  &--medium {
+    height: 40px;
+    font-size: 1.4rem;
+    min-width: 80px;
+  }
+
+  &--large {
+    height: 50px;
+    font-size: 1.6rem;
+    min-width: 100px;
+  }
+}

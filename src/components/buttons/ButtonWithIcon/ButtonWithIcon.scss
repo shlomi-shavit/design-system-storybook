@@ -1,0 +1,93 @@
+@use "../../../assets/styles/palette" as *;
+@use "../../../assets/styles/mixins.scss" as *;
+
+.button-with-icon {
+  direction: rtl;
+  border: 0;
+  cursor: pointer;
+  color: $yellow-200;
+  background-color: transparent;
+  font-weight: bold;
+  position: relative;
+  transition: all 100ms ease;
+  font-family: "Open Sans", "Open Sans hebrew", sans-serif;
+  @extend .center;
+
+  &:hover {
+    color: $yellow-300;
+
+    svg {
+      fill: $yellow-300;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &--loading {
+    color: $gray-300;
+  }
+
+  &--loader {
+    @include loader($gray-300, 12px, 2px);
+  }
+
+  &--small {
+    font-size: 1.3rem;
+    padding: 4px 6px;
+  }
+
+  &--medium {
+    font-size: 1.4rem;
+    padding: 5px 10px;
+  }
+
+  &--large {
+    font-size: 1.6rem;
+    padding: 6px 10px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: $gray-300;
+    opacity: 0.4;
+
+    svg {
+      fill: $gray-300;
+    }
+  }
+
+  &--right .button-with-icon__content {
+    flex-direction: row-reverse;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 16px;
+    margin: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button-with-icon--small & {
+      margin: 0 2px;
+    }
+
+    .button-with-icon--medium & {
+      margin: 0 4px;
+    }
+
+    .button-with-icon--large & {
+      margin: 0 6px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $yellow-200;
+    }
+  }
+}

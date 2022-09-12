@@ -1,0 +1,8 @@
+@use "../../../assets/styles/mixins.scss" as *;
+
+.center {
+  @extend .center;
+  height: 80vh;
+  width: 100%;
+  margin: auto;
+}

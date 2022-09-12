@@ -1,0 +1,7 @@
+@use "../../../assets/styles/palette" as *;
+
+a {
+  color: $yellow-200;
+  text-decoration-color: $yellow-200;
+  font-size: 1.6rem;
+}

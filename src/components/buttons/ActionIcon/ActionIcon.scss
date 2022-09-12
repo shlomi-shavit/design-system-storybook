@@ -1,0 +1,32 @@
+@use "../../../assets/styles/palette" as *;
+@use "../../../assets/styles/mixins.scss" as *;
+
+.icon {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  @extend .center;
+  position: inherit;
+
+  svg {
+    max-width: 24px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    fill: $yellow-200;
+    pointer-events: none;
+
+    @at-root .icon--clickable#{&} {
+      cursor: pointer;
+      pointer-events: initial;
+    }
+
+    &:hover {
+      fill: $yellow-300;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@use "../../../assets/styles/palette" as *;
+@use "../../../assets/styles/mixins.scss" as *;
+
+.upload-button {
+  &__container {
+    position: relative;
+    direction: rtl;
+
+    label {
+      width: 260px;
+      height: 120px;
+      @extend .center;
+      border-top: solid 1px $gray-200;
+      border-bottom: solid 1px $gray-200;
+      cursor: pointer;
+      box-sizing: border-box;
+      @extend .bg-transition;
+
+      &.disabled {
+        pointer-events: none;
+      }
+
+      &:hover {
+        background-color: $yellow-50;
+        border-color: $yellow-200;
+      }
+    }
+  }
+
+  &__input {
+    width: 45px;
+    height: 45px;
+    border: solid 1px $yellow-200;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 2px 0 6px;
+    @extend .center;
+
+    input {
+      opacity: 0;
+      @extend .hidden;
+    }
+
+    &__icon {
+      width: 25px;
+      height: 25px;
+      fill: $yellow-200;
+      position: relative;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 175px;
+    overflow: hidden;
+    @extend .bg-transition;
+
+    img,
+    video {
+      transition: all 0.2s ease;
+      animation: slidein 0.2s linear;
+    }
+  }
+
+  &__content {
+    @extend .center;
+
+    span:first-of-type {
+      font-size: 1.6rem;
+    }
+
+    span:last-of-type {
+      font-size: 1.3rem;
+      color: $gray-300;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    &--error {
+      span:first-of-type {
+        color: $red-50;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__delete-icon {
+    z-index: 1;
+    position: absolute;
+    left: 8px;
+    bottom: 10px;
+    fill: $yellow-200;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
