@@ -1,0 +1,255 @@
+@use "../../../../assets/styles/palette.scss" as *;
+
+.react-datepicker {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+
+  &__input {
+    position: relative;
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    direction: rtl;
+    box-sizing: border-box;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      @at-root .textfield_error#{&} {
+        color: $red-50;
+      }
+
+      span {
+        color: $yellow-200;
+        margin-right: 4px;
+        @at-root .textfield_error#{&} {
+          color: $red-50;
+        }
+      }
+    }
+
+    .react-datepicker__tab-loop {
+      position: relative;
+      animation: openDatepicker 0.1s linear forwards;
+    }
+
+    @keyframes openDatepicker {
+      from {
+        transition: all 0.1s ease-in-out;
+        transform-origin: top;
+        transform: scale(1, 0);
+      }
+      to {
+        max-height: 150px;
+        transform: scale(1, 1);
+      }
+    }
+  }
+
+  &__notifications {
+    display: flex;
+    font-size: 1.3rem;
+    color: $gray-300;
+  }
+
+  &__error-message {
+    height: 18px;
+    color: $red-50;
+    padding: 2px 0;
+    margin-left: 10px;
+  }
+
+  &__input-container {
+    input {
+      width: 100%;
+      height: 40px;
+      outline: none;
+      border: solid 1px $gray-200;
+      border-radius: 6px;
+      box-sizing: border-box;
+      padding: 0 10px;
+
+      &.react-datepicker-ignore-onclickoutside {
+        border-color: $yellow-200;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        & ~ .react-datepicker__close-icon {
+          opacity: 1;
+        }
+      }
+
+      &::placeholder {
+        color: $gray-200;
+      }
+    }
+  }
+
+  &__close-icon {
+    right: initial;
+    left: 11%;
+    top: 40px;
+    z-index: 3;
+    opacity: 0;
+
+    .react-datepicker--with-year-dropdown & {
+      left: 6%;
+    }
+
+    &:after {
+      background-color: transparent;
+      color: $yellow-200;
+      font-size: 1.4rem;
+      // content: attr(title);
+      content: "נקה";
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    fill: $yellow-200;
+    pointer-events: none;
+  }
+
+  &__month-container {
+    width: 100%;
+  }
+
+  &-popper {
+    width: 100%;
+
+    &[data-placement^="bottom"] {
+      padding-top: 0;
+    }
+
+    .react-datepicker {
+      box-sizing: border-box;
+      border-color: $yellow-200;
+      border-top: 0;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+
+  &__navigation {
+    height: 40px;
+  }
+
+  &__header {
+    background-color: white;
+    border-bottom: solid 1px $gray-100;
+    padding-top: 0;
+  }
+
+  &__current-month {
+    display: inline-flex;
+    height: 40px;
+    align-items: center;
+    font-weight: initial;
+    margin-right: 10px;
+
+    .react-datepicker--with-year-dropdown & {
+      margin-right: -20px;
+    }
+  }
+
+  &__header__dropdown {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &__year-read-view {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &--down-arrow {
+      right: initial;
+      left: -20px;
+      border-color: $yellow-200;
+      border-width: 2px 2px 0 0;
+      height: 7px;
+      top: 4px;
+      width: 7px;
+    }
+  }
+
+  &__day-names {
+    border-top: solid 1px $gray-100;
+  }
+
+  &__month {
+    margin: 14px 0;
+  }
+
+  &__day-name {
+    color: $gray-300;
+    line-height: 30px;
+  }
+
+  &__day-name,
+  &__day {
+    width: calc(100% / 7);
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  &__day--keyboard-selected,
+  &__day--selected {
+    background-color: transparent;
+    color: $yellow-200;
+    font-weight: bold;
+  }
+
+  &__today-button {
+    position: absolute;
+    top: 5px;
+    right: 11%;
+    font-weight: initial;
+    background: none;
+    border-top: none;
+    color: $yellow-200;
+
+    .react-datepicker--with-year-dropdown & {
+      right: 6%;
+    }
+  }
+
+  &__triangle {
+    display: none;
+  }
+
+  &__navigation--next,
+  &__navigation--previous {
+    transform: rotate(180deg);
+
+    span:before {
+      border-color: $yellow-200;
+    }
+  }
+
+  &__navigation--next {
+    right: initial;
+    left: 23%;
+
+    .react-datepicker--with-year-dropdown & {
+      left: 16%;
+    }
+  }
+
+  &__navigation--previous {
+    left: initial;
+    right: 23%;
+
+    .react-datepicker--with-year-dropdown & {
+      right: 16%;
+    }
+  }
+}

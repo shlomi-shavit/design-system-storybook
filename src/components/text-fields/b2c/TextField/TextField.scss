@@ -1,0 +1,98 @@
+@use "../../../../assets/styles/palette" as *;
+@use "../../../../assets/styles/mixins.scss" as *;
+
+.text-field {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  direction: rtl;
+
+  &__input-container {
+    position: relative;
+  }
+
+  &__input {
+    border: solid 1px $gray-200;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: $gray-300;
+    font-size: 1.5rem;
+    height: 40px;
+    caret-color: $yellow-200;
+    @extend .transition;
+
+    &::placeholder {
+      font-size: 1.4rem;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+    }
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: $gray-300;
+    }
+
+    &:hover {
+      border-color: $gray-400;
+    }
+
+    #{".text-field--is-filled  &"} {
+      border-color: $gray-300;
+    }
+
+    #{".text-field--disabled &"} {
+      border-color: $gray-300;
+    }
+
+    #{".text-field--error &"} {
+      border-color: $red-50;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $yellow-200;
+    }
+  }
+
+  label {
+    height: 10px;
+    line-height: 10px;
+    transition: all 0.3s ease;
+    color: $gray-600;
+    font-size: 1.6rem;
+    margin-bottom: 17px;
+    display: block;
+
+    span {
+      color: $yellow-200;
+      margin-right: 4px;
+      @at-root .textfield--error#{&} {
+        color: $red-50;
+      }
+    }
+  }
+
+  &__notifications {
+    display: flex;
+    font-size: 1.3rem;
+    color: $gray-300;
+  }
+
+  &__error-message {
+    height: 18px;
+    color: $red-50;
+    padding: 2px 0;
+    margin-left: 10px;
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}

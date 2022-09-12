@@ -1,0 +1,127 @@
+@use "../../../../assets/styles/palette" as *;
+@use "../../../../assets/styles/mixins.scss" as *;
+
+.textarea {
+  width: 100%;
+  border: solid 1px $gray-200;
+  border-radius: 3px;
+  outline: none;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  color: $gray-400;
+  resize: none;
+  font-family: "Open Sans", sans-serif;
+  @extend .transition;
+
+  &::placeholder {
+    color: $gray-200;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-200;
+    border-radius: 3px;
+  }
+
+  &:hover {
+    border-color: $gray-400;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $yellow-200;
+  }
+
+  #{".textarea--error &"} {
+    border-color: $red-50;
+  }
+
+  &__notifications {
+    display: flex;
+    padding: 0 10px;
+    font-size: 1.3rem;
+    color: $gray-300;
+    align-items: center;
+  }
+
+  &--error-message {
+    height: 18px;
+    color: $red-50;
+    padding: 2px 0;
+    margin-left: 10px;
+  }
+
+  &__help-text {
+    padding: 2px 0;
+  }
+
+  &__input-length {
+    text-align: left;
+    width: 50px;
+    padding: 2px 0;
+  }
+
+  &__delete-button {
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: 15px;
+    text-decoration: underline;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &__container {
+    position: relative;
+    max-width: 555px;
+    width: 100%;
+    direction: rtl;
+
+    label {
+      margin-bottom: 14px;
+      display: block;
+      height: 10px;
+      line-height: 10px;
+      transition: all 0.3s ease;
+      color: $gray-300;
+      font-size: 1.6rem;
+      width: 100%;
+
+      span {
+        color: $yellow-200;
+        margin-right: 4px;
+        @at-root .textarea--error#{&} {
+          color: $red-50;
+        }
+      }
+    }
+  }
+
+  &__carousel {
+    direction: ltr;
+    display: flex;
+
+    &__pagination {
+      text-align: center;
+    }
+
+    &__btn {
+      position: relative;
+      width: 24px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}

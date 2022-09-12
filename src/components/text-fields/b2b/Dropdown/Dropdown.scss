@@ -1,0 +1,154 @@
+@use "../../../../assets/styles/palette" as *;
+@use "../../../../assets/styles/mixins.scss" as *;
+
+$dropdown_height: 50px;
+
+.b2b-dropdown {
+  direction: rtl;
+  height: $dropdown_height;
+  max-width: 250px;
+  width: 100%;
+  border: solid 1px $gray-200;
+  position: relative;
+  font-size: 1.5rem;
+  color: $gray-400;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  @extend .transition;
+
+  &:hover:not(.b2b-dropdown--is-active) {
+    border-color: $gray-400;
+  }
+
+  &--is-active {
+    border-color: $yellow-200;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    height: 10px;
+    line-height: 10px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: $gray-300;
+    font-size: 1.6rem;
+
+    @at-root .b2b-dropdown--is-active#{&},
+    .b2b-dropdown--selected#{&} {
+      top: -100%;
+      right: 7px;
+      font-size: 1.3rem;
+      padding: 5px;
+      background: white;
+      color: $yellow-200;
+    }
+    @at-root .b2b-dropdown--selected#{&} {
+      color: $gray-300;
+    }
+  }
+
+  &--selected-value {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: calc(100% - 36px);
+    white-space: nowrap;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  & ul {
+    position: absolute;
+    top: $dropdown_height - 2;
+    right: -1px;
+    border: solid 1px $gray-200;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.1s ease-in-out;
+    transform-origin: top;
+    background: white;
+    transform: scale(1, 0);
+
+    @at-root .b2b-dropdown--up-mode#{&} {
+      transform-origin: bottom;
+      top: initial;
+      bottom: 49px + 10;
+      flex-direction: column-reverse;
+      display: flex;
+    }
+    @at-root .b2b-dropdown--is-active#{&} {
+      max-height: 500px;
+      transform: scale(1, 1);
+      border-color: $yellow-200;
+    }
+    li {
+      list-style-type: none;
+      min-height: 40px;
+      width: 100%;
+      text-align: right;
+      padding: 7px;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @extend .bg-transition;
+
+      &.b2b-dropdown__option--is-active,
+      &:hover {
+        background: $yellow-50;
+      }
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 100%;
+    margin-left: 9px;
+    fill: $gray-300;
+    position: relative;
+    @extend .transition;
+
+    .b2b-dropdown--disabled & {
+      opacity: 0.5;
+    }
+
+    .b2b-dropdown--is-active & {
+      transform: rotate(180deg);
+    }
+
+    .b2b-dropdown--up-mode & {
+      transform: rotate(180deg);
+    }
+
+    .b2b-dropdown--up-mode.b2b-dropdown--is-active & {
+      transform: rotate(0deg);
+    }
+  }
+
+  input {
+    border: none;
+    height: 100%;
+    outline: none;
+  }
+}
