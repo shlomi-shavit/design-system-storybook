@@ -1,0 +1,15 @@
+$popup-xxs: 400px;
+$popup-xs: 560px;
+$popup-s: 600px;
+$popup-m: 700px;
+$popup-l: 800px;
+$popup-xl: 950px;
+
+:export {
+  popup-xxs: $popup-xxs;
+  popup-xs: $popup-xs;
+  popup-s: $popup-s;
+  popup-m: $popup-m;
+  popup-l: $popup-l;
+  popup-xl: $popup-xl;
+}

@@ -1,0 +1,196 @@
+{
+  "accordion": {
+    "buttonLabel": "כפתור",
+    "buttonContent": "טקסט טקסט טקסט"
+  },
+  "button": {
+    "label": "כפתור"
+  },
+  "buttonWithIcon": {
+    "label": "חיפוש",
+    "loading": "טוען"
+  },
+  "searchBar": {
+    "dropdownCategory": "קטגוריה",
+    "dropdownRegion": "אזור",
+    "searchTextFieldPlaceholder": "חיפוש בית עסק",
+    "buttonLabel": "חיפוש",
+    "buttonWithIconLabel": "נקה חיפוש",
+    "dropdownOptions": [
+      "option-1",
+      "option-2",
+      "option-3"
+    ]
+  },
+  "dropdown": {
+    "search": "חיפוש",
+    "label": "דרופדאון",
+    "placeholder": "טקסט דרופדאון",
+    "clearSelection": "נקה בחירה...",
+    "dropdownOptions": [
+      "בחירה-1",
+      "בחירה- 2 עם טקסט ממש ממש ממש ממש ממש ממש ממש ממש ארוך",
+      "בחירה-3",
+      "בחירה-4",
+      "בחירה-5"
+    ],
+    "searchDropdownExamples": [
+      "קפה הנרייטה",
+      "קפה גרג",
+      "קפה גרג2",
+      "קפה גרג3",
+      "רטרו פנקייק בר",
+      "יקב טוליפ ויקב מאיה",
+      "מסעדת אמא",
+      "מסעדת 416",
+      "מסעדת אורבנו",
+      "גלידריית לגנדה - Legenda",
+      "לבנדר- קוסמטיקה טבעית",
+      "BUYME VEGAN- מתנות טבעוניות",
+      "באנה - Bana בית אוכל בריא ומושחת",
+      "באנה - Bana בית אוכל בריא ומושחת טקסט ממש ממש ממש ארוך",
+      "בית תאילנדי",
+      "אדון קרלוס- אופנה ומתנות לטבעונים",
+      "מתנות עד הבית",
+      "The Streets - רשת בתי קפה",
+      "מי קאסה - קפה בחצר",
+      "ספא וילה ויטראז",
+      "אליסיום עולם בריא לתינוקות",
+      "גיפט קארד למסעדות שף",
+      "בריאות ליולדת, פינוק לתינוק",
+      "גיפט קארד למותגי אופני",
+      "גיפט קארד למתנות לידה וצעצועים",
+      "גיפט קארד לארוחת בוקר ובתי קפה",
+      "גיפט קארד למסעדות",
+      "פודיז בעיר הגדולה",
+      "זמן איכות עם הבסטי",
+      "דייט קלאסי מהסרטים",
+      "ליולדת שיודעת מה טוב",
+      "חגיגות עד הבוקר שאחרי",
+      "אקסטרים בצפון"
+    ]
+  },
+  "searchDropdown": {
+    "noResults": "אין תוצאות תואמות"
+  },
+  "searchTextField": {
+    "label": "טקסט דרופדאון",
+    "placeholder": "איזו מתנה תרצו לחפש?",
+    "noResults": "אין תוצאות תואמות"
+  },
+  "textarea": {
+    "helpText": "טקסט עזרה",
+    "greetingArray": [
+      "ברכה 1",
+      "ברכה 2",
+      "ברכה 3",
+      "ברכה 4"
+    ],
+    "placeholder": "מזל טוב...",
+    "cleanAll": "נקה הכל"
+  },
+  "createNewCard": {
+    "label": "יצירת כרטיס חדש"
+  },
+  "linkButton": {
+    "label": "לינק"
+  },
+  "textEditor": {
+    "label": "תווית",
+    "helpText": "טקסט עזרה",
+    "dragOrSelectImage": "גררו תמונה או לחצו לבחירה"
+  },
+  "datePicker": {
+    "date": "תאריך",
+    "today": "היום",
+    "clear": "נקה"
+  },
+  "radioButton": {
+    "label": "כפתור רדיו"
+  },
+  "radioBox": {
+    "labels": [
+      "טוגל ימין",
+      "טוגל אמצע",
+      "טוגל שמאל"
+    ]
+  },
+  "selectionButton": {
+    "info": "לאחר התשלום תהיה אפשרות להדפסת המתנה"
+  },
+  "uploadButton": {
+    "fileUploadedSuccessfully": "קובץ הועלה בהצלחה",
+    "fileUploadedError": "ניתן להעלות קבצים במשקל עד 1.5MB",
+    "labels": [
+      "העלו לוגו",
+      "גודל מומלץ עד 1.5MB"
+    ]
+  },
+  "checkBox": {
+    "label": "צק בוקס",
+    "childrenLabels": [
+      "צק בוקס 1",
+      "צק בוקס 2",
+      "צק בוקס 3"
+    ]
+  },
+  "glyphButton": {
+    "labels": [
+      "חדש!",
+      "יומן האירועים שלי"
+    ]
+  },
+  "toggleButton": {
+    "labels": [
+      "עכשיו",
+      "במועד מאוחר יותר"
+    ]
+  },
+  "popup": {
+    "header": "כותרת פופאפ",
+    "content": "פעילות זו יכולה להיות שלך!"
+  },
+  "form": {
+    "textField": "שדה טקסט",
+    "passwordField": "שדה סיסמא",
+    "emailField": "שדה מייל",
+    "invalidText": "שדה לא תקין",
+    "invalidNumber": "מספר לא תקין",
+    "invalidEmail": "כתובת מייל לא תקינה",
+    "1smallEngLetter": "אות 1 קטנה באנגלית",
+    "1capitalEngLetter": "אות 1 גדולה באנגלית",
+    "1digit": "ספרה 1",
+    "min8Chars": "מינימום 8 תווים",
+    "required": "ערך זה דרוש"
+  },
+  "video": {
+    "videoLabel": "לצפייה בסרטון ברכה",
+    "popupTitle": "כותרת וידאו"
+  },
+  "audio": {
+    "audioContent": "ברכה קולית"
+  },
+  "typography": {
+    "header-1": "כותרת 1",
+    "header-2": "כותרת 2",
+    "header-3": "כותרת 3",
+    "header-4": "כותרת 4",
+    "subtitle-1": "כותרת משנה",
+    "subtitle-1-bold": "כותרת משנה 1 מודגשת",
+    "subtitle-2": "כותרת משנה 2",
+    "subtitle-2-bold": "כותרת משנה 2 מודגשת",
+    "subtitle-3": "כותרת משנה 3",
+    "subtitle-3-bold": "כותרת משנה 3 מודגשת",
+    "body": "כותרת (body)",
+    "body-small": "כותרת (body-small)",
+    "link": "לינק",
+    "caption": "הערה",
+    "button-small": "טקסט כפתור קטן",
+    "button-medium": "טקסט כפתור בינוני",
+    "button-large": "טקסט כפתור גדול"
+  },
+  "brands": {
+    "validBusinesses": "בתי עסק מכבדים",
+    "voucherRedeemInfo": "פרטי מימוש שובר"
+  }
+}

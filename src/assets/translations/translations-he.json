@@ -1,0 +1,35 @@
+{
+  "buttonWithIcon": {
+    "loading": "טוען"
+  },
+  "searchBar": {
+    "dropdownCategory": "קטגוריה",
+    "dropdownRegion": "אזור",
+    "searchTextFieldPlaceholder": "חיפוש בית עסק",
+    "buttonLabel": "חיפוש",
+    "buttonWithIconLabel": "נקה חיפוש",
+    "dropdownOptions": [
+      "option-1",
+      "option-2",
+      "option-3"
+    ]
+  },
+  "searchBarResults": {
+    "siteAddress": "קישור לרשימת סניפים",
+    "siteLink": "אתר בית העסק",
+    "accordionLabel": "פרטי מימוש שובר",
+    "noResultsTemplate": "לא נמצאו תוצאות מתאימות",
+    "popupTitle": "פרטי בית העסק"
+  },
+  "dropdown": {
+    "clearSelection": "נקה בחירה..."
+  },
+  "searchTextField": {
+    "noResults": "אין תוצאות תואמות"
+  },
+  "brandsPage": {
+    "accordionTitle": "פרטי מימוש שובר",
+    "brandsTitle": "בתי עסק מכבדים",
+    "brandsButtonLabel": "פרטי מימוש שובר"
+  }
+}

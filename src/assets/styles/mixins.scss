@@ -1,0 +1,93 @@
+@mixin loader($color, $size, $border-size) {
+  margin: 0 8px;
+  border: $border-size solid $color;
+  border-radius: 50%;
+  border-top: $border-size solid transparent;
+  width: $size;
+  height: $size;
+  animation: spin 2s linear infinite;
+}
+
+@mixin scrollBar($width, $scrollBgColor, $scrollColor) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+    margin: 10px;
+    background-color: $scrollBgColor;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollColor;
+    border-radius: 3px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/*
+ @mixin triangle($direction, $size, $color) {
+     background: white;
+     transform: rotate(45deg);
+     width: $size;
+     height: $size;
+
+     @if $direction == 'left' {
+         border-left: solid 1px $color;
+         border-bottom: solid 1px $color;
+     }
+     @if $direction == 'right' {
+         border-right: solid 1px $color;
+         border-top: solid 1px $color;
+     }
+     @if $direction == 'up' {
+         border-top: solid 1px $color;
+         border-left: solid 1px $color;
+     }
+     @if $direction == 'down' {
+         border-right: solid 1px $color;
+         border-bottom: solid 1px $color;
+     }
+ }
+*/
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.transition {
+  transition: all 0.2s ease;
+}
+
+.bg-transition {
+  transition: background-color 0.2s ease;
+}
+
+.hidden {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}

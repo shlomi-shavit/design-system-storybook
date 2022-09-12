@@ -1,0 +1,54 @@
+/* Common Breakpoints:
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV.
+*/
+
+$desktop: 1200px;
+$tablet: 768px;
+$mobile: 576px;
+$small-mobile: 420px;
+
+@mixin for-small-phone {
+  @media (max-width: $small-mobile) {
+    @content;
+  }
+}
+
+@mixin for-mobile {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

@@ -1,0 +1,15 @@
+@use "palette" as *;
+
+body {
+  color: $gray-400;
+}
+
+button,
+input,
+label,
+a,
+.b2b-dropdown,
+.dropdown,
+.accordion__title {
+  -webkit-tap-highlight-color: transparent;
+}

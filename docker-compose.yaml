@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  buyme-storybook:
+    container_name: buyme-storybook-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/home/node/app/src
+    ports:
+      - "6006:6006"

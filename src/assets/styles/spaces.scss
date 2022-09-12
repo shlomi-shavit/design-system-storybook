@@ -1,0 +1,18 @@
+$space-4: 4px;
+$space-10: 10px;
+$space-14: 14px;
+$space-20: 20px;
+$space-24: 24px;
+$space-30: 30px;
+$space-40: 40px;
+
+:export {
+  none: initial;
+  space-4: $space-4;
+  space-10: $space-10;
+  space-14: $space-14;
+  space-20: $space-20;
+  space-24: $space-24;
+  space-30: $space-30;
+  space-40: $space-40;
+}

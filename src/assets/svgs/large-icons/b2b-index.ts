@@ -1,0 +1,21 @@
+// Large B2B SVG's
+export { default as announcement } from './b2b/announcement.svg';
+export { default as creatingGift } from './b2b/creating-gift.svg';
+export { default as giftLanding } from './b2b/gift-landing.svg';
+export { default as island } from './b2b/island.svg';
+export { default as noResults } from './b2b/no-results.svg';
+export { default as searchGift } from './b2b/search-gift.svg';
+export { default as transferGifts } from './b2b/transfer-gifts.svg';
+export { default as celebration } from './b2b/celebration.svg';
+export { default as directions } from './b2b/directions.svg';
+export { default as giftsLoveComments } from './b2b/gifts-love-comments.svg';
+export { default as receiveGift } from './b2b/receive-gift.svg';
+export { default as secured } from './b2b/secured.svg';
+export { default as underConstructions } from './b2b/under-constructions.svg';
+export { default as contact } from './b2b/contact.svg';
+export { default as giftDeleted } from './b2b/gift-deleted.svg';
+export { default as giftWithTag } from './b2b/gift-with-tag.svg';
+export { default as mail } from './b2b/mail.svg';
+export { default as rockNn } from './b2b/rock-on.svg';
+export { default as thankYou } from './b2b/thank-you.svg';
+export { default as verified } from './b2b/verified.svg';

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="back"><path fill-rule="evenodd" clip-rule="evenodd" d="M30 15c0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15C0 6.716 6.716 0 15 0c8.284 0 15 6.716 15 15ZM16.5 8l1.762 1.762-5.725 5.738 5.725 5.738L16.5 23 9 15.5 16.5 8Z"/>
+    </symbol>
+    <symbol id="gallery-nav-left"><g clip-path="url(#clip0_254_102221)"><path d="M9.665 14.79 21.332 3.121 19.21 1 5.422 14.79 19.21 28.577l2.122-2.122L9.665 14.79Z"/></g><defs><clipPath id="clip0_254_102221"><path d="M0 0h30v30H0z"/></clipPath></defs>
+    </symbol>
+    <symbol id="gallery-nav-right"><g clip-path="url(#clip0_254_102224)"><path d="M20.335 14.79 8.668 3.121 10.79 1l13.788 13.79L10.79 28.577l-2.122-2.122L20.336 14.79Z"/></g><defs><clipPath id="clip0_254_102224"><path d="M0 0h30v30H0z"/></clipPath></defs>
+    </symbol>
+    <symbol id="circle-pause"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 30c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15C6.716 0 0 6.716 0 15c0 8.284 6.716 15 15 15ZM13 9H9v12h4V9Zm4 0h4v12h-4V9Z"/>
+    </symbol>
+    <symbol id="circle-play"><path  fill-rule="evenodd" clip-rule="evenodd" d="M30 15c0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15C0 6.716 6.716 0 15 0c8.284 0 15 6.716 15 15Zm-18.541 6.042 10-6.041-10-6.042v12.083Z"/>
+    </symbol>
+    <symbol id="play" viewBox="0 0 19 19"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5735 7.39184L1.58774 0.245737C0.714488 -0.305 0.000488281 0.101737 0.000488281 1.14847V15.0213C0.000488281 16.0681 0.716238 16.4739 1.58774 15.9224L13.5735 8.77626C14.1077 8.41445 14.1057 7.75334 13.5735 7.39184Z"></path>
+    </symbol>
+    <symbol id="pause" viewBox="0 0 18 18"><rect x="9.00049" width="5" height="16" rx="1"></rect><rect x="0.000488281" width="5" height="16" rx="1"></rect>
+    </symbol>
+    <symbol id="restart" viewBox="0 0 16 16"><path d="M16.0005 0V2L13.291 1.99899C14.9525 3.4649 16.0005 5.61007 16.0005 8C16.0005 12.4183 12.4188 16 8.00049 16C3.58221 16 0.000488281 12.4183 0.000488281 8C0.000488281 4.27209 2.55035 1.13973 6.00113 0.251869L6.00081 2.3413C3.67026 3.16488 2.00049 5.38744 2.00049 8C2.00049 11.3137 4.68678 14 8.00049 14C11.3142 14 14.0005 11.3137 14.0005 8C14.0005 5.77918 12.7939 3.84017 11.0005 2.80273L11.0005 7H9.00049V0L16.0005 0Z"/>
+    </symbol>
+</svg>

@@ -1,0 +1,38 @@
+$yellow-50: #fff4e5;
+$yellow-100: #ffc973;
+$yellow-200: #ffa126;
+$yellow-300: #f48d07;
+$turquoise-50: #1e879b;
+$turquoise-100: #10718e;
+$pink-50: #df0f65;
+$red-50: #f01f39;
+$green-50: #38a948;
+$gray-50: #f2f4f7;
+$gray-100: #e1e4ea;
+$gray-200: #bdc4d1;
+$gray-300: #79849a;
+$gray-400: #4f5869;
+$gray-500: #323a48;
+$gray-600: #262b36;
+$gray-700: #1a1e25;
+
+:export {
+  none: initial;
+  yellow-50: $yellow-50;
+  yellow-100: $yellow-100;
+  yellow-200: $yellow-200;
+  yellow-300: $yellow-300;
+  turquoise-50: $turquoise-50;
+  turquoise-100: $turquoise-100;
+  pink-50: $pink-50;
+  red-50: $red-50;
+  green-50: $green-50;
+  gray-50: $gray-50;
+  gray-100: $gray-100;
+  gray-200: $gray-200;
+  gray-300: $gray-300;
+  gray-400: $gray-400;
+  gray-500: $gray-500;
+  gray-600: $gray-600;
+  gray-700: $gray-700;
+}
