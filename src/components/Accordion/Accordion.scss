@@ -1,0 +1,52 @@
+@use "../../assets/styles/palette" as *;
+@use "../../assets/styles/mixins.scss" as *;
+@use "../../assets/styles/spaces.scss" as *;
+
+.accordion {
+  font-size: 1.8rem;
+  max-width: 1110px;
+
+  &__title {
+    font-weight: 600;
+    cursor: pointer;
+    color: $gray-300;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 200px;
+    width: fit-content;
+
+    .accordion--is-close & {
+      .accordion__button-with-icon {
+        .textual-icon {
+          transform: rotate(180deg);
+          @extend .transition;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    transition: max-height 0.2s cubic-bezier(1, 0, 1, 0);
+    height: auto;
+    max-height: 9999px;
+
+    .accordion----is-open & {
+    }
+
+    .accordion--is-close & {
+      max-height: 0;
+      transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
+    }
+  }
+
+  &__content {
+    padding: $space-10 0;
+    color: $gray-300;
+    font-size: 1.4rem;
+  }
+}
