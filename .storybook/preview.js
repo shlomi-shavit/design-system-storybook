@@ -1,6 +1,6 @@
 import '../src/assets/styles/typography.scss';
 import './storybook.scss';
-import { useTranslations } from '../src/translations/';
+import { useTranslations } from '../src/assets/translations/';
 
 useTranslations();
 
